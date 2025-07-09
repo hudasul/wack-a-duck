@@ -26,12 +26,17 @@ function init() {
     totalDucks = 0
    
   }
+
+  function placeRandomDuck(){
+     removeDuck();
+     duckPosition = Math.floor(Math.random() * numberOfCells);
+     addDuck();
+  }
+
   function play() {
     setInterval(() => {
       if (totalDucks < 10) {
-        removeDuck();
-        duckPosition = Math.floor(Math.random() * numberOfCells);
-        addDuck();
+        placeRandomDuck()
       }else{
         endGame()
       }
@@ -46,6 +51,7 @@ function init() {
       score += 10;
       scoreELem.textContent = `Your score is ${score}`;
       quackELem.play();
+      placeRandomDuck()
     }
   }
   function createGrid() {
