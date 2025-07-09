@@ -1,5 +1,5 @@
 .grid{
-    width: 600px;
+    width:596px;
     height: 600px;
     border: 1px solid black;
     display: flex;
@@ -11,4 +11,10 @@
     height: 58px;
     border: 1px solid black;
     
+}
+
+.duck{
+    background-image: url("../assets/duck.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
